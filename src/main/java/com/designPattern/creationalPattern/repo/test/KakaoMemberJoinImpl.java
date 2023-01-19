@@ -1,9 +1,9 @@
-package com.designPattern.creationalPattern.factoryMethod.repo.test;
+package com.designPattern.creationalPattern.repo.test;
 
-import com.designPattern.creationalPattern.factoryMethod.entity.KakaoMemberJoinEntity;
-import com.designPattern.creationalPattern.factoryMethod.entity.MemberJoinEntity;
-import com.designPattern.creationalPattern.factoryMethod.repo.KakaoMemberJoin;
-import com.designPattern.creationalPattern.factoryMethod.repo.MemberJoin;
+import com.designPattern.creationalPattern.entity.KakaoMemberJoinEntity;
+import com.designPattern.creationalPattern.entity.MemberJoinEntity;
+import com.designPattern.creationalPattern.repo.KakaoMemberJoin;
+import com.designPattern.creationalPattern.repo.MemberJoin;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.slf4j.Logger;

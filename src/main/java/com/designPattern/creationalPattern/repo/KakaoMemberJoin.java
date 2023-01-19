@@ -1,6 +1,6 @@
-package com.designPattern.creationalPattern.factoryMethod.repo;
+package com.designPattern.creationalPattern.repo;
 
-import com.designPattern.creationalPattern.factoryMethod.entity.KakaoMemberJoinEntity;
+import com.designPattern.creationalPattern.entity.KakaoMemberJoinEntity;
 
 /**
  * <pre>

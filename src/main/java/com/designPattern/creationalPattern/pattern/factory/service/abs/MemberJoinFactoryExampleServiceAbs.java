@@ -1,17 +1,17 @@
-package com.designPattern.creationalPattern.factoryMethod.service.abs;
+package com.designPattern.creationalPattern.pattern.factory.service.abs;
 
-import com.designPattern.creationalPattern.factoryMethod.process.MemberJoinProcess;
-import com.designPattern.creationalPattern.factoryMethod.service.MemberJoinService;
+import com.designPattern.creationalPattern.pattern.factory.process.MemberJoinProcess;
+import com.designPattern.creationalPattern.pattern.factory.service.MemberJoinFactoryExampleService;
 
 /**
  * <pre>
  *     회원가입 처리 팩토리 메서드 패턴을 활용한 추상 클래스
  * </pre>
  */
-public abstract class MemberJoinServiceAbs implements MemberJoinService {
+public abstract class MemberJoinFactoryExampleServiceAbs implements MemberJoinFactoryExampleService {
 
     /**
-     * {@link MemberJoinService#join(Object)}
+     * {@link MemberJoinFactoryExampleService#join(Object)}
      */
     @Override
     public <T> void join(T joinEntity) {

@@ -1,4 +1,4 @@
-package com.designPattern.creationalPattern.factoryMethod.entity;
+package com.designPattern.creationalPattern.entity;
 
 /**
  * <pre>

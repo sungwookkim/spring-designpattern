@@ -1,8 +1,8 @@
-package com.designPattern.creationalPattern;
+package com.designPattern.creationalPattern.factoryMethod;
 
-import com.designPattern.creationalPattern.factoryMethod.entity.KakaoMemberJoinEntity;
-import com.designPattern.creationalPattern.factoryMethod.entity.MemberJoinEntity;
-import com.designPattern.creationalPattern.factoryMethod.service.MemberJoinService;
+import com.designPattern.creationalPattern.entity.KakaoMemberJoinEntity;
+import com.designPattern.creationalPattern.entity.MemberJoinEntity;
+import com.designPattern.creationalPattern.pattern.factoryMethod.service.MemberJoinService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 @SpringBootTest
-class CreationalPatternTests {
+class FactoryMethodPatternTests {
 
 	@Autowired
 	MemberJoinService kakaoMemberJoinServiceImpl;

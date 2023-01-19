@@ -1,7 +1,7 @@
-package com.designPattern.creationalPattern.factoryMethod.repo.test;
+package com.designPattern.creationalPattern.repo.test;
 
-import com.designPattern.creationalPattern.factoryMethod.entity.MemberJoinEntity;
-import com.designPattern.creationalPattern.factoryMethod.repo.MemberJoin;
+import com.designPattern.creationalPattern.entity.MemberJoinEntity;
+import com.designPattern.creationalPattern.repo.MemberJoin;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,9 +1,10 @@
-package com.designPattern.creationalPattern.factoryMethod.process.impl;
+package com.designPattern.creationalPattern.pattern.factory.process.impl;
 
-import com.designPattern.creationalPattern.factoryMethod.entity.KakaoMemberJoinEntity;
-import com.designPattern.creationalPattern.factoryMethod.entity.MemberJoinEntity;
-import com.designPattern.creationalPattern.factoryMethod.process.MemberJoinProcess;
-import com.designPattern.creationalPattern.factoryMethod.repo.KakaoMemberJoin;
+import com.designPattern.creationalPattern.pattern.factory.process.MemberJoinProcess;
+import com.designPattern.creationalPattern.pattern.factory.repo.MemberJoinFactory;
+import com.designPattern.creationalPattern.entity.KakaoMemberJoinEntity;
+import com.designPattern.creationalPattern.entity.MemberJoinEntity;
+import com.designPattern.creationalPattern.repo.test.KakaoMemberJoinImpl;
 
 import java.util.UUID;
 
@@ -13,11 +14,9 @@ import java.util.UUID;
  * </pre>
  */
 public class KakaoMemberJoinProcessImpl implements MemberJoinProcess {
-    private final KakaoMemberJoin kakaoMemberJoinImpl;
     private final KakaoMemberJoinEntity kakaoMemberJoinEntity;
 
-    public KakaoMemberJoinProcessImpl(KakaoMemberJoin kakaoMemberJoinImpl, KakaoMemberJoinEntity kakaoMemberJoinEntity) {
-        this.kakaoMemberJoinImpl = kakaoMemberJoinImpl;
+    public KakaoMemberJoinProcessImpl(KakaoMemberJoinEntity kakaoMemberJoinEntity) {
         this.kakaoMemberJoinEntity = kakaoMemberJoinEntity;
     }
 
@@ -28,11 +27,13 @@ public class KakaoMemberJoinProcessImpl implements MemberJoinProcess {
      */
     @Override
     public void join() {
+        KakaoMemberJoinImpl kakaoMemberJoinImpl = MemberJoinFactory.getInstance(KakaoMemberJoinImpl.class);
+
         MemberJoinEntity memberJoinEntity = new MemberJoinEntity(this.kakaoMemberJoinEntity.getKakaoAccountEmail()
                 , UUID.randomUUID().toString().replace("-", "").substring(0, 10)
                 , MemberJoinEntity.MemberJoinType.KAKAO);
 
-        this.kakaoMemberJoinImpl.kakaoJoin(this.kakaoMemberJoinEntity);
-        this.kakaoMemberJoinImpl.join(memberJoinEntity);
+        kakaoMemberJoinImpl.kakaoJoin(this.kakaoMemberJoinEntity);
+        kakaoMemberJoinImpl.join(memberJoinEntity);
     }
 }

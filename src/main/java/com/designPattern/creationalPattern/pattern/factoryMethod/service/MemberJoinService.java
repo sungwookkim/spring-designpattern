@@ -1,4 +1,4 @@
-package com.designPattern.creationalPattern.factoryMethod.service;
+package com.designPattern.creationalPattern.pattern.factoryMethod.service;
 
 /**
  * <pre>
