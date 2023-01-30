@@ -14,7 +14,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
-@ActiveProfiles("db")
 @SpringBootTest
 public class PrototypePatternTests {
     Logger logger = LoggerFactory.getLogger(this.getClass());
