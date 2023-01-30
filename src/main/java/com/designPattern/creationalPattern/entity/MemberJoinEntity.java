@@ -17,6 +17,10 @@ public class MemberJoinEntity {
         this.memberJoinType = memberJoinType;
     }
 
+    public static MemberJoinEntity defaultEntity() {
+        return new MemberJoinEntity("", "", MemberJoinType.DEFAULT);
+    }
+
     public String getMemberId() {
         return memberId;
     }
@@ -36,7 +40,8 @@ public class MemberJoinEntity {
      */
     public enum MemberJoinType {
         KAKAO("Kakao")
-        , DEFAULT("Default");
+        , DEFAULT("Default")
+        ;
 
         private final String type;
 

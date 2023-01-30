@@ -1,9 +1,9 @@
-package com.designPattern.creationalPattern.repo.test;
+package com.designPattern.creationalPattern.repo.memberJoin.write.test;
 
 import com.designPattern.creationalPattern.entity.KakaoMemberJoinEntity;
 import com.designPattern.creationalPattern.entity.MemberJoinEntity;
-import com.designPattern.creationalPattern.repo.KakaoMemberJoin;
-import com.designPattern.creationalPattern.repo.MemberJoin;
+import com.designPattern.creationalPattern.repo.memberJoin.write.KakaoMemberJoinWrite;
+import com.designPattern.creationalPattern.repo.memberJoin.write.MemberJoinWrite;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.slf4j.Logger;
@@ -20,20 +20,18 @@ import java.util.List;
  * </pre>
  */
 @Repository
-public class KakaoMemberJoinImpl implements KakaoMemberJoin {
+public class KakaoMemberJoinWriteImpl implements KakaoMemberJoinWrite {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
-
     private final List<KakaoMemberJoinEntity> memberJoinEntities = new ArrayList<>();
+    private final MemberJoinWrite memberJoinWriteImpl;
 
-    private final MemberJoin memberJoinImpl;
-
-    public KakaoMemberJoinImpl(MemberJoin memberJoinImpl) {
-        this.memberJoinImpl = memberJoinImpl;
+    public KakaoMemberJoinWriteImpl(MemberJoinWrite memberJoinWriteImpl) {
+        this.memberJoinWriteImpl = memberJoinWriteImpl;
     }
 
     /**
      * <pre>
-     *     {@link KakaoMemberJoin#kakaoJoin(KakaoMemberJoinEntity)}
+     *     {@link KakaoMemberJoinWrite#kakaoJoin(KakaoMemberJoinEntity)}
      * </pre>
      *
      * @param kakaoMemberJoinEntity 카카오톡 회원정보 엔티티
@@ -46,14 +44,18 @@ public class KakaoMemberJoinImpl implements KakaoMemberJoin {
 
     /**
      * <pre>
-     *     {@link MemberJoin#join(MemberJoinEntity)}
+     *     {@link MemberJoinWrite#join(MemberJoinEntity)}
      * </pre>
      *
      * @param memberJoinEntity 기본 회원정보 엔티티
      */
     @Override
     public void join(MemberJoinEntity memberJoinEntity) {
-        this.memberJoinImpl.join(memberJoinEntity);
+        this.memberJoinWriteImpl.join(memberJoinEntity);
+    }
+
+    public List<KakaoMemberJoinEntity> getMemberJoinEntities() {
+        return memberJoinEntities;
     }
 
     @Override

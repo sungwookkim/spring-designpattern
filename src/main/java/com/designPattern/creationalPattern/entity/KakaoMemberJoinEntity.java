@@ -32,6 +32,16 @@ public class KakaoMemberJoinEntity {
         this.kakaoAccountEmail = kakaoAccountEmail;
     }
 
+    public static KakaoMemberJoinEntity defaultEntity() {
+        return new KakaoMemberJoinEntity(0L
+                , LocalDateTime.now()
+                , false
+                , false
+                , false
+                , false
+                , "");
+    }
+
     public long getId() {
         return id;
     }

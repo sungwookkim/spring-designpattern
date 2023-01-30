@@ -1,8 +1,9 @@
-package com.designPattern.creationalPattern.repo.test;
+package com.designPattern.creationalPattern.repo.memberJoin.write.test;
 
 import com.designPattern.creationalPattern.entity.MemberJoinEntity;
-import com.designPattern.creationalPattern.repo.MemberJoin;
+import com.designPattern.creationalPattern.repo.memberJoin.write.MemberJoinWrite;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
@@ -17,14 +18,14 @@ import java.util.List;
  * </pre>
  */
 @Repository
-public class MemberJoinImpl implements MemberJoin {
+public class MemberJoinWriteImpl implements MemberJoinWrite {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     private final List<MemberJoinEntity> memberJoinEntities = new ArrayList<>();
 
     /**
      * <pre>
-     *     {@link MemberJoin#join(MemberJoinEntity)}
+     *     {@link MemberJoinWrite#join(MemberJoinEntity)}
      * </pre>
      *
      * @param memberJoinEntity 기본 회원정보 엔티티
@@ -35,10 +36,14 @@ public class MemberJoinImpl implements MemberJoin {
         this.logger.info("defaultJoin : {}", this);
     }
 
+    public List<MemberJoinEntity> getMemberJoinEntities() {
+        return memberJoinEntities;
+    }
+
     @Override
     public String toString() {
         try {
-            return new ObjectMapper().writeValueAsString(this.memberJoinEntities);
+            return new ObjectMapper().registerModule(new JavaTimeModule()).writeValueAsString(this.memberJoinEntities);
         } catch (Exception e) {
             return this.memberJoinEntities.toString();
         }

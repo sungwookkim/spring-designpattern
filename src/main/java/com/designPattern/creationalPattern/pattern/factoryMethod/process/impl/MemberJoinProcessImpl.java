@@ -2,7 +2,7 @@ package com.designPattern.creationalPattern.pattern.factoryMethod.process.impl;
 
 import com.designPattern.creationalPattern.entity.MemberJoinEntity;
 import com.designPattern.creationalPattern.pattern.factoryMethod.process.MemberJoinProcess;
-import com.designPattern.creationalPattern.repo.MemberJoin;
+import com.designPattern.creationalPattern.repo.memberJoin.MemberJoin;
 
 /**
  * <pre>

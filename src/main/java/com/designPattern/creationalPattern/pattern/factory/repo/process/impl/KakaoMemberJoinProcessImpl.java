@@ -1,10 +1,10 @@
-package com.designPattern.creationalPattern.pattern.factory.process.impl;
+package com.designPattern.creationalPattern.pattern.factory.repo.process.impl;
 
-import com.designPattern.creationalPattern.pattern.factory.process.MemberJoinProcess;
-import com.designPattern.creationalPattern.pattern.factory.repo.MemberJoinFactory;
 import com.designPattern.creationalPattern.entity.KakaoMemberJoinEntity;
 import com.designPattern.creationalPattern.entity.MemberJoinEntity;
-import com.designPattern.creationalPattern.repo.test.KakaoMemberJoinImpl;
+import com.designPattern.creationalPattern.pattern.factory.repo.process.MemberJoinProcess;
+import com.designPattern.creationalPattern.repo.memberJoin.factory.MemberJoinFactory;
+import com.designPattern.creationalPattern.repo.memberJoin.test.KakaoMemberJoinImpl;
 
 import java.util.UUID;
 

@@ -1,11 +1,11 @@
-package com.designPattern.creationalPattern.pattern.factory.process;
+package com.designPattern.creationalPattern.pattern.abstractFactory.process.join;
 
 /**
  * <pre>
  *     회원가입 관련 인터페이스
  * </pre>
  */
-public interface MemberJoinProcess {
+public interface MemberJoinAbsFactoryProcess {
 
     /**
      * <pre>

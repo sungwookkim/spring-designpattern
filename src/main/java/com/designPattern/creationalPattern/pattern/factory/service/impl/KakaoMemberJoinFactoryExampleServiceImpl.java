@@ -1,7 +1,7 @@
 package com.designPattern.creationalPattern.pattern.factory.service.impl;
 
-import com.designPattern.creationalPattern.pattern.factory.process.MemberJoinProcess;
-import com.designPattern.creationalPattern.pattern.factory.process.impl.KakaoMemberJoinProcessImpl;
+import com.designPattern.creationalPattern.pattern.factory.repo.process.MemberJoinProcess;
+import com.designPattern.creationalPattern.pattern.factory.repo.process.impl.KakaoMemberJoinProcessImpl;
 import com.designPattern.creationalPattern.pattern.factory.service.MemberJoinFactoryExampleService;
 import com.designPattern.creationalPattern.pattern.factory.service.abs.MemberJoinFactoryExampleServiceAbs;
 import com.designPattern.creationalPattern.entity.KakaoMemberJoinEntity;

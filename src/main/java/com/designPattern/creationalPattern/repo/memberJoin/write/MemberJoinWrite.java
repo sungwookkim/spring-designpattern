@@ -1,4 +1,4 @@
-package com.designPattern.creationalPattern.repo;
+package com.designPattern.creationalPattern.repo.memberJoin.write;
 
 import com.designPattern.creationalPattern.entity.MemberJoinEntity;
 
@@ -7,7 +7,7 @@ import com.designPattern.creationalPattern.entity.MemberJoinEntity;
  *     가입 회원 정보를 다루기 위한 인터페이스
  * </pre>
  */
-public interface MemberJoin {
+public interface MemberJoinWrite {
 
     /**
      * <pre>

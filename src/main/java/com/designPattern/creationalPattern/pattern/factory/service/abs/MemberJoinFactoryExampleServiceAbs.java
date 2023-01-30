@@ -1,6 +1,6 @@
 package com.designPattern.creationalPattern.pattern.factory.service.abs;
 
-import com.designPattern.creationalPattern.pattern.factory.process.MemberJoinProcess;
+import com.designPattern.creationalPattern.pattern.factory.repo.process.MemberJoinProcess;
 import com.designPattern.creationalPattern.pattern.factory.service.MemberJoinFactoryExampleService;
 
 /**
