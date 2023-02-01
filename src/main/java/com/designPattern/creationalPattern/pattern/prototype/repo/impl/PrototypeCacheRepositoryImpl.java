@@ -10,22 +10,37 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * <pre>
+ *     캐시 사용 코드 구현체
+ *     예제를 위해 변수에 저장
+ * </pre>
+ */
 @Repository
 public class PrototypeCacheRepositoryImpl implements PrototypeRepository {
 
     private final List<PrototypeEntity> cacheValue = new ArrayList<>();
 
+    /**
+     * {@link PrototypeRepository#save(PrototypeEntity)}
+     */
     @Override
     public PrototypeEntity save(PrototypeEntity value) {
         this.cacheValue.add(value);
         return value;
     }
 
+    /**
+     * {@link PrototypeRepository#findAll()}
+     */
     @Override
     public List<PrototypeEntity> findAll() {
         return this.cacheValue;
     }
 
+    /**
+     * {@link PrototypeRepository#findById(String)}
+     */
     @Override
     public Optional<PrototypeEntity> findById(String code) {
 

@@ -18,4 +18,10 @@ spring:
     database: h2
 logging:
   level:
-    org.hibernate.sql: debug
+    org:
+      hibernate:
+        sql: debug
+        type:
+          descriptor:
+            sql:
+              BasicBinder: trace

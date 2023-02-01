@@ -1,0 +1,10 @@
+services:
+  db:
+    container_name: h2
+    image: oscarfonts/h2:latest
+    ports:
+      - 3521:1521
+      - 9081:81
+    environment:
+      H2_OPTIONS: -ifNotExists
+    restart: always

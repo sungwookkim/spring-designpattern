@@ -3,6 +3,11 @@ package com.designPattern.creationalPattern.pattern.prototype.entity;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+/**
+ * <pre>
+ *     코드 엔티티
+ * </pre>
+ */
 @Entity(name = "prototype")
 public class PrototypeEntity {
     @Id
