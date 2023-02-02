@@ -10,14 +10,29 @@ import com.designPattern.creationalPattern.pattern.builder.process.validate.Memb
  * </pre>
  */
 public class MemberJoinBuilder {
-    private final MemberJoinBuilder.Builder builder;
+
+    private final MemberJoinBuilderProcess memberJoinBuilderProcess;
+
+    private final MemberJoinValidateBuilderProcess memberJoinValidateBuilderProcess;
+
+    private final MemberJoinEventBuilderProcess memberJoinEventBuilderProcess;
 
     MemberJoinBuilder(MemberJoinBuilder.Builder builder) {
-        this.builder = builder;
+        this.memberJoinBuilderProcess = builder.memberJoinBuilderProcess;
+        this.memberJoinValidateBuilderProcess = builder.memberJoinValidateBuilderProcess;
+        this.memberJoinEventBuilderProcess = builder.memberJoinEventBuilderProcess;
     }
 
-    public Builder getBuilder() {
-        return builder;
+    public MemberJoinBuilderProcess getMemberJoinBuilderProcess() {
+        return memberJoinBuilderProcess;
+    }
+
+    public MemberJoinValidateBuilderProcess getMemberJoinValidateBuilderProcess() {
+        return memberJoinValidateBuilderProcess;
+    }
+
+    public MemberJoinEventBuilderProcess getMemberJoinEventBuilderProcess() {
+        return memberJoinEventBuilderProcess;
     }
 
     /**
@@ -43,18 +58,6 @@ public class MemberJoinBuilder {
             this.memberJoinEventBuilderProcess = memberJoinEventBuilderProcess;
 
             return this;
-        }
-
-        public MemberJoinBuilderProcess getMemberJoinBuilderProcess() {
-            return memberJoinBuilderProcess;
-        }
-
-        public MemberJoinValidateBuilderProcess getMemberJoinValidateBuilderProcess() {
-            return memberJoinValidateBuilderProcess;
-        }
-
-        public MemberJoinEventBuilderProcess getMemberJoinEventProcess() {
-            return memberJoinEventBuilderProcess;
         }
 
         public MemberJoinBuilder builder() {

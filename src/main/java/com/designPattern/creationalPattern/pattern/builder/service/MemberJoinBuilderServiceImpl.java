@@ -22,12 +22,11 @@ public class MemberJoinBuilderServiceImpl {
      * @param memberJoinBuilder 회원가입 프로세스 빌더 클래스
      */
     public void join(MemberJoinBuilder memberJoinBuilder) {
-        MemberJoinBuilder.Builder builder = memberJoinBuilder.getBuilder();
 
-        builder.getMemberJoinValidateBuilderProcess().validate();
-        builder.getMemberJoinBuilderProcess().join();
+        memberJoinBuilder.getMemberJoinValidateBuilderProcess().validate();
+        memberJoinBuilder.getMemberJoinBuilderProcess().join();
 
-        Optional.ofNullable(builder.getMemberJoinEventProcess())
+        Optional.ofNullable(memberJoinBuilder.getMemberJoinEventBuilderProcess())
                 .ifPresent(MemberJoinEventBuilderProcess::event);
     }
 }
