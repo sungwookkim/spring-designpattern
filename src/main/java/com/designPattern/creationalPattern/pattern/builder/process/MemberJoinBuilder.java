@@ -41,11 +41,14 @@ public class MemberJoinBuilder {
      * </pre>
      */
     public static class Builder {
+        // 이벤트 객체 미 초기화 시 기본으로 사용할 객체 설정 용도.
+        private final static MemberJoinEventBuilderProcess DEFAULT_EVENT_CALL = () -> {};
+
         private final MemberJoinBuilderProcess memberJoinBuilderProcess;
 
         private final MemberJoinValidateBuilderProcess memberJoinValidateBuilderProcess;
 
-        private MemberJoinEventBuilderProcess memberJoinEventBuilderProcess;
+        private MemberJoinEventBuilderProcess memberJoinEventBuilderProcess = DEFAULT_EVENT_CALL;
 
         public Builder(MemberJoinBuilderProcess memberJoinBuilderProcess
                 , MemberJoinValidateBuilderProcess memberJoinValidateBuilderProcess) {

@@ -25,8 +25,6 @@ public class MemberJoinBuilderServiceImpl {
 
         memberJoinBuilder.getMemberJoinValidateBuilderProcess().validate();
         memberJoinBuilder.getMemberJoinBuilderProcess().join();
-
-        Optional.ofNullable(memberJoinBuilder.getMemberJoinEventBuilderProcess())
-                .ifPresent(MemberJoinEventBuilderProcess::event);
+        memberJoinBuilder.getMemberJoinEventBuilderProcess().event();
     }
 }
